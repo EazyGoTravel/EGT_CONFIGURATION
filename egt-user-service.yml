@@ -1,11 +1,12 @@
 server:
   port: 8081
   
-spring:
-  cloud:
-    gateway:
-      routes:
-        - id: egt-user-service
-          uri: http://egt-user-service
-          predicates:
-            - Path=/egt-user-service/**
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    fetchRegistry: true
+    register-with-eureka: true
+  instance:
+    hostname: local
+    preferIpAddress: false 
