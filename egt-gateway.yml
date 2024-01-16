@@ -1,3 +1,13 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    fetchRegistry: true
+    register-with-eureka: true
+  instance:
+    hostname: local
+    preferIpAddress: false 
+
 server:
   port: 8090
 
@@ -10,13 +20,5 @@ spring:
           predicates:
             - Path=/egt-user-service/**
 
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
-    fetchRegistry: true
-    register-with-eureka: true
-  instance:
-    hostname: local
-    preferIpAddress: false 
+
 
