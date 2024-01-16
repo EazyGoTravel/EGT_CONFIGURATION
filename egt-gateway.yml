@@ -16,6 +16,6 @@ spring:
     gateway:
       routes:
         - id: egt-user-service
-          uri: localhost:8091
+          uri: http://localhost:8091
           predicates:
             - Path=/egt-user-service/**
