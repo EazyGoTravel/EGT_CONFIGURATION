@@ -1,2 +1,11 @@
 server:
   port: 8081
+  
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: egt-user-service
+          uri: http://egt-user-service
+          predicates:
+            - Path=/egt-user-service/**
