@@ -5,7 +5,6 @@ eureka:
     fetchRegistry: true
     register-with-eureka: true
   instance:
-    hostname: localhost
     preferIpAddress: false 
 
 server:
