@@ -19,8 +19,6 @@ spring:
           uri: http://egt-user-service
           predicates:
             - Path=/egt-user-service/**
-          filters:
-            - RewritePath=/egt-user-service/(?<path>.*), /$\{path}
 
 
 
