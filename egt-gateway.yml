@@ -6,7 +6,6 @@ eureka:
     register-with-eureka: true
   instance:
     preferIpAddress: false
-    hostname: localhost
 
 server:
   port: 8090
