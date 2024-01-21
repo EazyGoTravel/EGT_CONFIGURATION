@@ -9,5 +9,11 @@ eureka:
 
 server:
   port: 8091
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/oauth2/jwks
   
 
