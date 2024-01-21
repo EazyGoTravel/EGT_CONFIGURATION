@@ -11,6 +11,23 @@ server:
   port: 8090
 
 spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          custom-client:
+            client-id: egt-app
+            client-secret: secret
+            redirect-uri: "http://localhost:8080/login/oauth2/code/{registrationId}"
+            scope: read,write
+        provider:
+          custom-provider:
+            authorization-uri: http://localhost:8080/oauth/authorize
+            token-uri: http://localhost:8080/oauth/token
+            user-info-uri: http://localhost:8080/userinfo
+            user-name-attribute: neehar
+
+spring:
   cloud:
     gateway:
       routes:
